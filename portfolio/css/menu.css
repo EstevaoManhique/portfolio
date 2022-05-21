@@ -1,0 +1,107 @@
+/*Fontes do Google Fonts que serao usadas no projecto*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+/*Icones em forma de fontes, retirados do site: fa icons*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css);
+
+/*Conteiner de menu*/
+.sidebar{
+    width:20rem;
+    height: 100vh;
+    background-color: #fff;
+    position:fixed;
+    top:0;
+    right:0;
+    /*Inicialmente o elemento estara -20rem a
+     esquerda relativamente a si mesmo*/
+    right: -20rem;
+    transition: all 0.4s;
+    z-index: 200;
+}
+
+/*elemento.class significa que a classe foi adicionada de forma dinamica pelo JavaScript*/
+div.show-menu .sidebar{
+    /*E quando a classe show-menu for adicionada a ele
+    ele ira se mover para sua posicao inicial*/
+    right: 0;
+}
+
+/*Item de menu*/
+.menu-item{
+    /*Centraliza o texto dentro deste elemento*/
+    text-align: center;
+    margin-bottom: .5rem;
+}
+/*Menu*/
+.menu{
+    position:absolute;
+    top:40%;
+    left:50%;
+    /*Centraliza os elementos deste conteiner*/
+    transform: translate(-50%, -50%);
+}
+
+/*Texto no elemento de menu*/
+.menu-link{
+    font-family: var(--font-action);
+    font-size:2rem;
+    color: #555;
+    /*Tempo de demora na transicao da propriedade color*/
+    transition: color 1s;
+}
+
+/*Mudanca de cor no elemento de menu*/
+.menu-link:hover{
+    color:#8E2DE2;
+}
+
+/* .clicado .sidebar{
+    right: -20rem;
+} */
+
+/*Conteiner dos elementos das redes socias*/
+.social-media{
+    position:absolute;
+    bottom: 2rem;
+    width:100%;
+    /*A propriedade justify-content deve estar com a propriedade display flex*/
+    display:flex;
+    justify-content:space-evenly;
+}
+
+/*Elementos das redes socias*/
+.social-media i{
+    background-color: #8E2DE2;
+    color: rgba(255,255,255,1);
+    height: 2.5rem;
+    width: 2.5rem;
+    /*Estes icones sao elementos de textos, e nao fotos
+    por isso utilizamos font-size para seu tamanho*/
+    font-size: 1.5rem;
+    /*Apresenta os elementos de forma flexivel para
+    que possa ser usados pela propriedade sequinte*/
+    display:flex;
+    /*Da espacamento horizonal entre os items*/
+    justify-content: center;
+    /*Alinha o item na vertical*/
+    align-items: center;
+    border-radius: 50%;
+    /*Tempo que leva na transicao da propriedade colocada*/
+    transition: background-color 1s; 
+}
+
+/*Altera a cor de fundo do icone da rede social quando o mouse
+passa por ele*/
+.social-media i:hover{
+    background-color: #8E2DE2;
+}
+
+@media (max-width:426px){
+    div.show-menu .sidebar{
+        /*E quando a classe show-menu for adicionada a ele
+        ele ira se mover para sua posicao inicial*/
+        right: 0;
+        width: 100vw;
+    }
+
+}

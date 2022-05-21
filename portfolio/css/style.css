@@ -1,0 +1,33 @@
+/*Fontes do Google Fonts que serao usadas no projecto*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+/*Icones em forma de fontes, retirados do site: fa icons*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css);
+
+/*Por padrao, o tamnho da fonte do elemento raiz, body, eh 16px.*/
+
+/*Retira bordas de todos elementos*/
+*{
+    margin:0;
+    padding:0;
+    /*Retira o "ponto" ou a numeracao nos elementos da lista*/
+    list-style: none;
+    /*Retira o sublinhado nos elementos de lista*/
+    text-decoration: none;
+}
+
+/*Elemento raiz*/
+:root{
+    --font-primary:"Baloo Da 2", serif;
+    --font-secundary: "josefin slab", serif;
+    --font-action: "Mulish", serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.conteiner{
+    width: 100vw;
+    margin: auto;
+}

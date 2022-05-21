@@ -1,0 +1,110 @@
+/*Fontes do Google Fonts que serao usadas no projecto*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+/*Icones em forma de fontes, retirados do site: fa icons*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css);
+
+/*Conteiner do atalho de menu*/
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 300;
+    right: 2rem;   
+    top: 2rem; 
+    display: flex;
+    /*Deixa os elementos deste conteiner em forma de coluna*/
+    flex-direction: column;
+    /*Determina o tipo de espacamento entre os elementos que estao neste conteiner*/
+    justify-content: space-around;
+    /*O cursor se transforma numa maozinha quando chega neste conteiner*/
+    cursor:pointer;
+    /*transition: propriedade .ns - Determina que o de transicao do valor da propriedade:propriedade
+    sera por n segundos ate. Essa transicao eh entre o valor determinado neste elemento e o valor determinado
+    para este elemento quando uma accao eh executada*/
+    transition: all .5s;
+}
+
+/*A classe .show-menu eh adicionada dinamicamente quando ocorre um evento - "click" neste caso, JavaScript.
+Sendo assim, enquanto esta classe "existir", o elemento .hamburguer sera movimentado a 17rem da direita do
+seu elemento pai, neste caso, corresponde a janela de visualizacao*/
+.show-menu .hamburguer{
+    right: 17rem;
+}
+
+/*linhas do atalho de menu (hamburguer)*/
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: black;
+    /*O efeito transform vai ocorrer por ns segundos*/
+    transition: transform 1s;
+}
+
+/*Determina a rotacao - no sentido horario, da 1.a linha do .hamburguer*/
+.show-menu #line1{
+    transform:rotate(45deg) translate(.3rem, .45rem);
+}
+
+.show-menu #line2{
+    /*Visibilidade tem o mesmo valor que opacidade, mas ela possui valores fechados*/
+    visibility:collapse;    
+    /*Opacidade determina o quao visivel um elemento estara e varia de [0,1]*/
+    opacity: 0;  
+}
+
+/*Determina a rotacao da 3.a linha do .hamburguer*/
+.show-menu #line3{
+    /*transform:transformacao(valorTransformacao);
+    
+    Mais especifico:
+    tramsform:rotacao(grausDaRotacao) movimentacao(medidaOX, medidaOY);
+    */
+    transform:rotate(-45deg) translate(.3rem, -.45rem);
+}
+/*Icone fechar do atalho de menu*/
+.hamburguer span{
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    /*Na horizontal:Deixa o(s) elemento(s) ao centro e com espacamentos iguais*/
+    justify-content: center;
+    /*Na vertical:Deixa o(s) elemento(s) ao centro e com espacamentos iguais*/
+    align-items: center;
+    background-color:#8E2DE2;
+    color: #ffffff;
+    font-family: var(--font-action);
+    /*Por padrao, o elemento estara invisivel*/
+    opacity: 0;
+}
+
+/*Este elemento eh o triangulo que fica antes do hamburguer*/
+.hamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #8E2DE2;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    /*A leitura eh -1rem da esquerda:
+    -Do elemento pai, se position for absolute
+    -Do proprio elemento se position for relative*/
+    left: -1rem;
+}
+/*Quando mouse passar do elemento hamburguer (atalho de menu)
+o elemento span (fechar) ira se tornar visivel*/
+.show-menu .hamburguer:hover span{
+    opacity: 1;
+}
+
+@media (max-width:426px){
+    .show-menu .hamburguer{
+        right: 2rem;
+    }
+
+    .hamburguer span{
+        display: none;       
+    }
+}

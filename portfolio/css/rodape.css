@@ -1,0 +1,67 @@
+/*Fontes do Google Fonts que serao usadas no projecto*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+/*Icones em forma de fontes, retirados do site: fa icons*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css);
+
+
+/*Rodape*/
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Conteiner do rodape*/
+.footer-content{
+    width: 60%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color:#a7a7a7;
+    font-size:1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display:flex;
+}
+
+#link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.6rem black;
+}
+
+@media (max-width: 406px){
+    .footer-content p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 343px){
+    .footer-content p{
+        font-size: .9rem;
+    }
+}

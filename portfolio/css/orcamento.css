@@ -1,0 +1,126 @@
+/*Fontes do Google Fonts que serao usadas no projecto*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+/*Icones em forma de fontes, retirados do site: fa icons*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css);
+
+html{
+    font-size: 14px;
+}
+/*Inicio da estilizacao da sessao orcamento*/
+.sessao-orcamento{
+    width:auto;
+    height:auto;
+    background: url("imagens/project1.jpg");
+    object-fit:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:4rem 0 2rem 0;   
+}
+
+/*Estilizando o embrulho de desta sessao*/
+.orcamento-wrapper{
+    width:60%;
+    height:auto; 
+    background-color: #ffffff99;
+    border-radius:10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.5);
+    position:relative;
+}
+
+/*O titulo*/
+.sessao-orcamento h1{
+    position:absolute;
+    top:-2.5rem;
+    left: 2rem;
+    /*Colocamos tres background por causa do suporte de cada tipo de dispositivo*/
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #4A00E0, #8E2DE2);
+    padding: 0 3rem;
+    color:white;
+    font-family:var(--font-primary);
+    font-size:3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+/*O formulario*/
+.sessao-orcamento form{
+    margin: 4rem;
+    display:grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+/*Todas label's*/
+.sessao-orcamento label{
+    font-family: var(--font-secundary);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/*Somente os input cujo que recebem so numeros*/
+.sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 2rem;
+    outline-color: #8E2DE2  ;
+    border-radius: 0.625rem;
+    border: none;
+    padding: 0.3rem;
+    border: solid 0.1px #8E2DE2;
+}
+
+/*O botao da area de orcamento*/
+.btn-orcamento{
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor:pointer;
+    grid-column: 2;
+}
+
+@media(max-width:1024px){
+    .orcamento-wrapper{
+        width: 75%;
+    }
+}
+
+@media(max-width:845px){
+    html{
+        font-size: 80%;
+    }
+}
+
+@media(max-width:775px){
+    html{
+        font-size: 70%;
+    }
+    .orcamento-wrapper{
+        width: 80%;
+    }
+}
+
+@media(max-width:680px){
+    html{
+        font-size: 60%;
+    }
+}
+
+
+@media(max-width:586px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media(max-width:425px){
+    .orcamento-wrapper{
+        width: 100%;
+        border-radius:10px;
+        box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.5);
+    }
+}
